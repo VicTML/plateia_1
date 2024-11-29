@@ -1,0 +1,295 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+html, body {
+  height: 100%;
+}
+
+#main, #conteudo, #contato {
+  flex: 1;
+}
+
+a {
+  color: #fff;
+}
+
+h1, h2 {
+  color: #14213d;
+}
+
+#header-menu > a > img {
+  width: 120px;
+}
+
+#header-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #14213d;
+  padding: 2px 30px;
+}
+
+#header-menu ul {
+  display: flex;
+  gap: 20px;
+  font-size: 25px;
+}
+
+#header-menu ul li a {
+  color: #ffffff;
+}
+
+#header-menu ul li a:hover {
+  color: #ffb703;
+}
+
+#text1 {
+  gap: 20px;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  margin: 20;
+  background-color: #e0f7fa;
+  text-align: center;
+  gap: 20px;
+}
+
+#main .saiba-mais button {
+  padding: 10px 30px;
+  background-color: #006d77;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#main .saiba-mais button:hover {
+  background-color: #007f88;
+}
+
+#conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: 
+      ". . temas"
+      ". ambiente ."
+      "confiança . .";
+  gap: 40px;
+  padding: 50px;
+  background-color: #f0f8ff;
+  text-align: center;
+}
+
+#conteudo .grid-item {
+  padding: 20px;
+  background-color: #98c1d9;
+  border-radius: 10px;
+}
+
+.grid-item.temas {
+  grid-area: temas;
+}
+
+.grid-item.ambiente {
+  grid-area: ambiente;
+}
+
+.grid-item.confiança {
+  grid-area: confiança;
+}
+
+#contato {
+  padding: 50px;
+  background-color: #e0f7fa;
+  color: #fff;
+  text-align: center;
+}
+
+#contato h2 {
+  padding: 20px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#form input, #form textarea {
+  padding: 10px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+#form label {
+  color: #14213d;
+}
+
+#form button {
+  padding: 10px 20px;
+  background-color: #ffb703;
+  color: #14213d;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#form button:hover {
+  background-color: #ffa600;
+}
+
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #14213d;
+  color: #ffffff;
+}
+
+#footer p {
+  font-size: 15px;
+  margin-bottom: 0;
+}
+
+.footer-logos img {
+  margin: 10px 10px;
+}
+
+.footer-logos img:hover {
+  background-color: #007f88;
+}
+.img-2 {
+  height: 45px;
+  align-items: center;
+  margin-top: -2px;
+  margin-left: 2px;
+}
+
+.carousel {
+  position: relative;
+  min-height: 500px; 
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto; 
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  flex: 0 0 100%;
+  width: 100%;
+  max-width: 100%;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 100%; 
+  object-fit: cover; 
+  display: block;
+  border-radius: 10px; 
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  z-index: 10;
+}
+
+.carousel-control.prev {
+  left: 10px;
+}
+
+.carousel-control.next {
+  right: 10px;
+}
+
+#nova {
+  color: #333;
+}
+
+#nova:hover {
+  color: #007f88;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+}
+
+#link-copy {
+  color: white;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: 700;
+}
+
+#link-copy:hover {
+  color: #ffa600;
+}
+
+.tooltip #logo img {
+  width: 120px;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help; 
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: rgb(125, 125, 125, 0.9);
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 100; 
+  bottom: -25%; 
+  left: 50%;
+  transform: translateX(-50%); 
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  background-color: #ffffff;
+}
+
+.tooltipimg:hover  {
+  background-color: white;
+}
